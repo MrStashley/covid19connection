@@ -1,5 +1,5 @@
 {
-  "name": "covid-19 connection",
+  "name": "covid-19connection",
   "version": "1.0.0",
   "description": "website that allows people to provide their services online during quarantine",
   "main": "index.js",
