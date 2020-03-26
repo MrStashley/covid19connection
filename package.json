@@ -1,0 +1,28 @@
+{
+  "name": "covid-19 connection",
+  "version": "1.0.0",
+  "description": "website that allows people to provide their services online during quarantine",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrStashley/covid19connection.git"
+  },
+  "author": "Cole Lashley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrStashley/covid19connection/issues"
+  },
+  "homepage": "https://github.com/MrStashley/covid19connection#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.0",
+    "hjs": "0.0.6",
+    "hogan-middleware": "^0.2.2",
+    "mysql": "^2.17.1",
+    "nodemailer": "^6.1.1",
+    "socket.io": "^2.2.0"
+  }
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="UTF-8">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <title>Color</title>
+ </head>
+ <body>
+   <div id = "divColor" style = "height: 500px; width: 100%; background-color: powderblue;"> </div>
+   <script>
+    var urlParams = new URLSearchParams(window.location.search);
+    console.log(window.location.search);
+    var r = urlParams.get("r");
+    var b = urlParams.get("b");
+    var g = urlParams.get("g");
+    console.log("r: " + r + " g: " + g + " b: " + b);
+    var divColor = document.getElementById("divColor");
+    divColor.style.backgroundColor = "rgb("+r+"," +g + "," +b+")";
+   </script>
+ </body>
+</html>
