@@ -1,0 +1,48 @@
+Metadata
+Table: categories
+id: Identity(1,1); unique id for connection type
+category: string name of category
+
+categories:
+Trending
+Music & Performance
+Art
+Food
+Fitness
+Health & Wellness
+Academic
+
+
+Table: connection_types
+id: Identity(1,1); unique id for connection type
+connection_type: string name of connection type
+
+connection types:
+Service:
+Event:
+
+User Data:
+Table: User Data
+Fields:
+id: Identity(1,1); unique id for reference to users
+Username: string
+Password: string
+credit_card_info: long string of json list of serialized creditcard objects
+name: string
+bio: string user bio
+followers: long string of json list of follower ids
+following: long string of json list of following ids
+following_events: long string of json list of connection ids that user has followed
+purchased: long string of json list of connection ids that user has purchased/rsvped/showed interest in
+viewed: long string of json list of connection ids that user recently viewed
+
+Connection Data:
+Table: Connection data
+id: Identity(1,1); unique id for reference to connections
+user: integer with the id of the user who created the connection
+with: long string of json list of additional users that are also participating
+category: string category that this connection falls under
+price: double price to participate in connection
+description: description of connection
+purchased: long string of json list of user ids who purchased/rsvped
+connection_type: integer with id of connection type
