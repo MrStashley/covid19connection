@@ -25,17 +25,43 @@ const con = mysql.createPool({
 	connectTimeout: 100000
 })
 
-class dataHolder {
-  constructor(lat, long, accuracy, id){
-    this.lat = lat;
-    this.long = long;
-    this.accuracy = accuracy;
-    this.imgLink = __dirname + '/getfaceimage?id=' + id;
+class persistentData {
+  constructor(){
+    this.loggedin = false;
+  }
+
+  setLoggedin(){
+    this.loggedIn = true;
   }
 }
 
+class dataHolder {
+  constructor(categories, persistentData){
+    this.categories = categories;
+    this.persistentData = persistentData;
+  }
+}
+
+var perData = new persistentData();
+
 app.get("/", (req, res, next) =>{
-  res.render("home");
+  var categories = [];
+  con.query("select * from meta_categories", function(err, result, fields){
+    if(err)
+      console.log(err.stack);
+
+    result.forEach(function(item, index){
+      console.log("adding " + item.category + " to categories");
+      categories.push(item.category);
+    });
+
+    categories.forEach(function(item,index){
+      console.log("Category: " + item);
+    });
+
+    var data = new dataHolder(categories, perData);
+    res.render("home", {data: JSON.stringify(data)});
+  });
 });
 
 app.get("/color", (req, res, next) =>{

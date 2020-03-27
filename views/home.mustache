@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <link rel="shortcut icon" href="assets/images/logo-white.png" type="image/x-icon">
   <meta name="description" content="HTML Page Template">
-  <title>HTML Page Template - Architect AMP</title>
+  <title>Covid 19 Connection</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="canonical" href="index.html">
  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
@@ -42,52 +42,53 @@ body{font-family: Didact Gothic;}blockquote{border-color: #009b95;}div[submit-su
 
 			<ul class="navbar-nav nav-dropdown" data-app-modern-menu="true"><li class="nav-item dropdown open">
 					<a class="nav-link link text-white dropdown-toggle display-7" data-toggle="dropdown-submenu" aria-expanded="true">
-						HTML Templates</a>
-					<div class="dropdown-menu">
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/shop/index.html">HTML Business Template</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/ecommerce/index.html">HTML eCommerce Website Template</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/hotel/index.html">Hotel HTML Template</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/landing-page/index.html">Landing Page HTML Template</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/html-themes/index.html">HTML Themes</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/html-page-template/index.html">HTML Page Template</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/html5-basic-template/index.html">HTML5 Basic Template</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/free-html-css-templates/index.html">Free HTML CSS Templates</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/html5-responsive-template/index.html">HTML5 Responsive Template</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/free-website-templates-html5/index.html">Free Website Templates HTML5</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/simple-html-templates-free-download/index.html">Simple HTML Templates Free Download</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/free-html-themes/index.html">Free HTML Themes</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/html5-templates-free-download/index.html">HTML5 Templates Free Download</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/html-website-templates-free-download/index.html">HTML Website Templates Free Download </a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/free-html5-responsive-templates/index.html">Free HTML5 Responsive Templates</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/html-template-download/index.html">HTML Template Download</a>
-					</div>
+						Account</a>
+					<div class="dropdown-menu" id = "account_corner_dropdown">
+
+          </div>
 				</li>
+
+        <script id = "add categories to dropdown">
+          function createNewDropDownItem(text, link, parent){
+            var newItem = document.createElement("a");
+            newItem.classList.add("text-white");
+            newItem.classList.add("dropdown-item");
+            newItem.classList.add("display-9");
+            newItem.href = link;
+            newItem.innerHTML = text;
+            parent.appendChild(newItem);
+          }
+
+
+          var dataString = "{{data}}";
+          var data = JSON.parse(dataString.replace(/(&quot\;)/g,"\"").replace(/(&amp\;)/g,"&"));
+          console.log(data);
+          var account_corner_dropdown = document.getElementById("account_corner_dropdown");
+          if(data.persistentData.loggedin){
+
+          } else{
+            console.log("hello");
+            createNewDropDownItem("Sign Up", window.location.href + "/sign-up", account_corner_dropdown);
+            createNewDropDownItem("Log In", window.location.href + "/log-in", account_corner_dropdown);
+          }
+
+        </script>
 
                <li class="nav-item dropdown open">
 					<a class="nav-link link text-white dropdown-toggle display-7" data-toggle="dropdown-submenu" aria-expanded="true">
-						More HTML Templates</a>
-					<div class="dropdown-menu">
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/premium/index.html">Premium HTML Theme</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/profile/index.html">HTML Resume Template</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/shopping/index.html">Shopping HTML Template</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/store/index.html">Responsive HTML Theme</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/web-design-theme/index.html">HTML Design Templates</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/one-page-html-template/index.html">One Page HTML Template</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/html-and-css-templates/index.html">HTML And CSS Templates</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/html-layout-templates/index.html">HTML Layout Templates</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/simple-html5-template/index.html">Simple HTML5 Template</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/bootstrap-templates-free-download-for-html5/index.html">Bootstrap Templates Free Download For HTML5</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/free-html-bootstrap-templates/index.html">Free HTML Bootstrap Templates</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/responsive-html-template/index.html">Responsive HTML Template</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/html-portfolio-template/index.html">HTML Portfolio Template</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/bootstrap-html-template/index.html">Bootstrap HTML Template</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/html-web-templates/index.html">HTML Web Templates</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/html-homepage-template/index.html">HTML Homepage Template</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/simple-html-website-template/index.html">Simple HTML Website Template</a>
+						Categories</a>
+					<div class="dropdown-menu" id = "category_corner_dropdown">
 					</div>
 				</li></ul>
-			<div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-white display-4" href="http://mobirise.com/">
-					Download Now</a></div>
+
+        <script>
+          var category_corner_dropdown = document.getElementById("category_corner_dropdown")
+          for(let i = 0; i < data.categories.length; i++){
+            let link = window.location.pathname + "/categories/" + data.categories[i];
+            createNewDropDownItem(data.categories[i],link,category_corner_dropdown);
+          }
+
+        </script>
 
 		</div>
 	</amp-sidebar>
@@ -135,49 +136,38 @@ body{font-family: Didact Gothic;}blockquote{border-color: #009b95;}div[submit-su
 			<ul class="navbar-nav nav-dropdown" data-app-modern-menu="true"><li class="nav-item dropdown open">
 					<a class="nav-link link text-white dropdown-toggle display-7" data-toggle="dropdown-submenu" aria-expanded="true">
 						Categories</a>
-					<div class="dropdown-menu">
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/shop/index.html">HTML Business Template</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/ecommerce/index.html">HTML eCommerce Website Template</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/hotel/index.html">Hotel HTML Template</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/landing-page/index.html">Landing Page HTML Template</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/html-themes/index.html">HTML Themes</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/html-page-template/index.html">HTML Page Template</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/html5-basic-template/index.html">HTML5 Basic Template</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/free-html-css-templates/index.html">Free HTML CSS Templates</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/html5-responsive-template/index.html">HTML5 Responsive Template</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/free-website-templates-html5/index.html">Free Website Templates HTML5</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/simple-html-templates-free-download/index.html">Simple HTML Templates Free Download</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/free-html-themes/index.html">Free HTML Themes</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/html5-templates-free-download/index.html">HTML5 Templates Free Download</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/html-website-templates-free-download/index.html">HTML Website Templates Free Download </a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/free-html5-responsive-templates/index.html">Free HTML5 Responsive Templates</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/html-template-download/index.html">HTML Template Download</a>
+					<div class="dropdown-menu" id = "category_dropdown">
 					</div>
 				</li>
 
+        <script>
+        var category_dropdown = document.getElementById("category_dropdown");
+        for(let i = 0; i < data.categories.length; i++){
+          let link = window.location.href + "categories/" + data.categories[i];
+          createNewDropDownItem(data.categories[i],link,category_dropdown);
+        }
+
+        </script>
+
                <li class="nav-item dropdown open">
 					<a class="nav-link link text-white dropdown-toggle display-7" data-toggle="dropdown-submenu" aria-expanded="true">
-						More HTML Templates</a>
-					<div class="dropdown-menu">
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/premium/index.html">Premium HTML Theme</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/profile/index.html">HTML Resume Template</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/shopping/index.html">Shopping HTML Template</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/store/index.html">Responsive HTML Theme</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/web-design-theme/index.html">HTML Design Templates</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/one-page-html-template/index.html">One Page HTML Template</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/html-and-css-templates/index.html">HTML And CSS Templates</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/html-layout-templates/index.html">HTML Layout Templates</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/simple-html5-template/index.html">Simple HTML5 Template</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/bootstrap-templates-free-download-for-html5/index.html">Bootstrap Templates Free Download For HTML5</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/free-html-bootstrap-templates/index.html">Free HTML Bootstrap Templates</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/responsive-html-template/index.html">Responsive HTML Template</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/html-portfolio-template/index.html">HTML Portfolio Template</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/bootstrap-html-template/index.html">Bootstrap HTML Template</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/html-web-templates/index.html">HTML Web Templates</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/html-homepage-template/index.html">HTML Homepage Template</a>
-						<a class="text-white dropdown-item display-7" href="https://mobirise.com/html-templates/simple-html-website-template/index.html">Simple HTML Website Template</a>
+						Account</a>
+					<div class="dropdown-menu" id = "account_dropdown">
 					</div>
 				</li></ul>
+
+        <script>
+        var account_dropdown = document.getElementById("account_dropdown");
+        console.log(data.persistentData.loggedin);
+        if(data.persistentData.loggedin){
+
+        }else{
+          createNewDropDownItem("Sign Up", window.location.href + "/sign-up", account_dropdown);
+          createNewDropDownItem("Log In", window.location.href + "/log-in", account_dropdown);
+        }
+
+        </script>
+
 			<div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-white display-4" href="http://mobirise.com/">
 					Download Now</a></div>
 

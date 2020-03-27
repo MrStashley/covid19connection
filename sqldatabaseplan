@@ -7,10 +7,11 @@ categories:
 Trending
 Music & Performance
 Art
-Food
-Fitness
+Food & Drink
+Sports & Fitness
 Health & Wellness
-Academic
+Academics & Education
+Fun
 
 
 Table: connection_types
@@ -30,6 +31,7 @@ Password: string
 credit_card_info: long string of json list of serialized creditcard objects
 name: string
 bio: string user bio
+pic: varbinary image profile pic
 followers: long string of json list of follower ids
 following: long string of json list of following ids
 following_events: long string of json list of connection ids that user has followed
