@@ -157,18 +157,14 @@ hr {
   curUrl = window.location.href;
   function validateForm(form){
     console.log("asdf");
-    if(form.psw != form.psw_repeat){
-      alert("Passwords do not match.");
+    if(form.psw.value != form.psw_repeat.value){
+      alert("Passwords do not match: " + form.psw.value + " " + form.psw_repeat.value);
     } else {
       var xhttp = new XMLHttpRequest();
       xhttp.open("POST", "sign-up", true);
       xhttp.setRequestHeader("Content-type", "application/json");
       xhttp.send(JSON.stringify(form));
     }
-
-    xhttp.open("GET", "",false);
-    xhttp.send();
-
   }
 
   </script>

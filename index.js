@@ -68,8 +68,11 @@ app.get("/color", (req, res, next) =>{
   res.render("color");
 });
 
-app.get("/sign-in", (req, res, next) =>{
-  res.render("sign-in");
+app.post("/sign-up", (req, res, next) =>{
+  console.log("User: " + req.body.user);
+  console.log("Email: " + req.body.email);
+  console.log("Password: "+ req.body.psw);
+
 });
 
 
