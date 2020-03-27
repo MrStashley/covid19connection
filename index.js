@@ -68,6 +68,10 @@ app.get("/color", (req, res, next) =>{
   res.render("color");
 });
 
+app.get("/sign-in", (req, res, next) =>{
+  res.render("sign-in");
+});
+
 
 http.listen(port, function(){
   console.log('listening on *:' + port);

@@ -7,7 +7,12 @@
   <meta name="generator" content="Mobirise v4.7.5, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <link rel="shortcut icon" href="assets/images/logo-white.png" type="image/x-icon">
-  <meta name="description" content="HTML Page Template">
+  <meta name="description" content="Covid 19 Connection">
+  <meta charset="utf-8">
+	<script src="../ckeditor.js"></script>
+	<script src="js/sample.js"></script>
+	<link rel="stylesheet" href="css/samples.css">
+	<link rel="stylesheet" href="toolbarconfigurator/lib/codemirror/neo.css">
   <title>Covid 19 Connection</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="canonical" href="index.html">
@@ -32,6 +37,183 @@ body{font-family: Didact Gothic;}blockquote{border-color: #009b95;}div[submit-su
 
 
 </head>
+
+<!DOCTYPE html>
+<html>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: absolute; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #474e5d;
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+</style>
+
+<div id="id01" class="modal">
+  <script>
+  curUrl = window.location.href;
+  function validateForm(form){
+    console.log("asdf");
+    if(form.psw != form.psw_repeat){
+      alert("Passwords do not match.");
+    } else {
+      var xhttp = new XMLHttpRequest();
+      xhttp.open("POST", "sign-up", true);
+      xhttp.setRequestHeader("Content-type", "application/json");
+      xhttp.send(JSON.stringify(form));
+    }
+
+    xhttp.open("GET", "",false);
+    xhttp.send();
+
+  }
+
+  </script>
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" onsubmit="validateForm(this);">
+    <div class="container">
+      <h1>Sign Up</h1>
+      <br/>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+      <label for = "username"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="user" required>
+
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw_repeat" required>
+
+      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy (WIP)</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+
 <body><amp-sidebar id="sidebar" class="cid-qTrRmAmWcT" layout="nodisplay" side="right">
 		<div class="builder-sidebar" id="builder-sidebar">
 			<button on="tap:sidebar.close" class="close-sidebar">
@@ -59,17 +241,24 @@ body{font-family: Didact Gothic;}blockquote{border-color: #009b95;}div[submit-su
             parent.appendChild(newItem);
           }
 
+          function signUpDropDown(parent){
+            var newItem = document.createElement("a");
+            newItem.classList.add("text-white");
+            newItem.classList.add("dropdown-item");
+            newItem.classList.add("display-9");
+            newItem.innerHTML = "Sign Up";
+            newItem.onclick = function() {document.getElementById('id01').style.display='block'};
+            parent.appendChild(newItem);
+          }
 
           var dataString = "{{data}}";
           var data = JSON.parse(dataString.replace(/(&quot\;)/g,"\"").replace(/(&amp\;)/g,"&"));
-          console.log(data);
           var account_corner_dropdown = document.getElementById("account_corner_dropdown");
           if(data.persistentData.loggedin){
 
           } else{
-            console.log("hello");
-            createNewDropDownItem("Sign Up", window.location.href + "/sign-up", account_corner_dropdown);
-            createNewDropDownItem("Log In", window.location.href + "/log-in", account_corner_dropdown);
+            signUpDropDown(account_corner_dropdown);
+            createNewDropDownItem("Log In", window.location.href + "log-in", account_corner_dropdown);
           }
 
         </script>
@@ -84,7 +273,7 @@ body{font-family: Didact Gothic;}blockquote{border-color: #009b95;}div[submit-su
         <script>
           var category_corner_dropdown = document.getElementById("category_corner_dropdown")
           for(let i = 0; i < data.categories.length; i++){
-            let link = window.location.pathname + "/categories/" + data.categories[i];
+            let link = window.location.pathname + "/categories/" + data.categories[i].replace(/\s+/g, '-').toLowerCase();;
             createNewDropDownItem(data.categories[i],link,category_corner_dropdown);
           }
 
@@ -143,7 +332,7 @@ body{font-family: Didact Gothic;}blockquote{border-color: #009b95;}div[submit-su
         <script>
         var category_dropdown = document.getElementById("category_dropdown");
         for(let i = 0; i < data.categories.length; i++){
-          let link = window.location.href + "categories/" + data.categories[i];
+          let link = window.location.href + "categories/" + data.categories[i].replace(/\s+/g, '-').toLowerCase();;
           createNewDropDownItem(data.categories[i],link,category_dropdown);
         }
 
@@ -162,14 +351,14 @@ body{font-family: Didact Gothic;}blockquote{border-color: #009b95;}div[submit-su
         if(data.persistentData.loggedin){
 
         }else{
-          createNewDropDownItem("Sign Up", window.location.href + "/sign-up", account_dropdown);
-          createNewDropDownItem("Log In", window.location.href + "/log-in", account_dropdown);
+          signUpDropDown(account_dropdown);
+          createNewDropDownItem("Log In", window.location.href + "log-in", account_dropdown);
         }
 
         </script>
 
-			<div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-white display-4" href="http://mobirise.com/">
-					Download Now</a></div>
+			<div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-white display-4" href="https://covid19connection.herokuapp.com/log-in">
+					Log in</a></div>
 
 		</div>
 
